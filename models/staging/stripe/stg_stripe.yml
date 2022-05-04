@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_payments
+    description: Staging table with payments data
+    columns: 
+      - name: payment_id
+        description: Unique payment id, key column
+        tests:
+          - unique
+          - not_null

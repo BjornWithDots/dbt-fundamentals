@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: ga-data-242308
+    schema: Bjorn_Blomberg
+    tables:
+      - name: stripe_payment
+        loaded_at_field: TIMESTAMP(CREATED)
+        freshness:
+          warn_after: {count: 12, period: hour}
+          #error_after: {count: 24, period: hour}
